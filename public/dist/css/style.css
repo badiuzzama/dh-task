@@ -1,0 +1,50 @@
+.main-sidebar { background: #232730; }
+.content-header { background: #1f232c; }
+.content-header h1 { color: #fff !important; }
+.breadcrumb-item a { color: #fff; }
+.breadcrumb-item.active { color: #fff; }
+.breadcrumb-item+.breadcrumb-item::before { color: #fff; }
+.welcome { padding-top: 20px; }
+
+.login-page { background: url(../img/login-bg.jpg); }
+.card { background: none; box-shadow: none; }
+.login-box { padding: 115px 95px 85px 95px; background-size: 100% 100%;width: 100%;
+    max-width: 655px;
+    height: 507px;
+    margin: 100px auto; background: url(../img/download.jpg); }
+
+
+.login-box a { font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-family: 'EMprint-Bold';
+    color: #fff; }    
+
+.login-box .login-card-body, .register-card-body { padding: 20px 45px; background: none; }
+
+.login-box input.form-control { background: #1e4f8a; border: none; color: #fff; }    
+.input-group-text { background: #1e4f8a !important; border: none; }
+.login-card-body .input-group .input-group-text, .register-card-body .input-group .input-group-text { color: #fff; }
+
+.login-box .btn-block { border: none;
+    background: rgba(235,7,7,1);
+    background: -moz-linear-gradient(left, rgba(235,7,7,1) 0%, rgba(244,48,48,1) 51%, rgba(254,90,90,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,7,7,1)), color-stop(51%, rgba(244,48,48,1)), color-stop(100%, rgba(254,90,90,1)));
+    background: -webkit-linear-gradient(left, rgba(235,7,7,1) 0%, rgba(244,48,48,1) 51%, rgba(254,90,90,1) 100%);
+    background: -o-linear-gradient(left, rgba(235,7,7,1) 0%, rgba(244,48,48,1) 51%, rgba(254,90,90,1) 100%);
+    background: -ms-linear-gradient(left, rgba(235,7,7,1) 0%, rgba(244,48,48,1) 51%, rgba(254,90,90,1) 100%);
+    background: linear-gradient(to right, rgba(235,7,7,1) 0%, rgba(244,48,48,1) 51%, rgba(254,90,90,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb0707', endColorstr='#fe5a5a', GradientType=1 );
+    width: 100%;
+    height: 38px;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'EMprint-Semibold';
+    line-height: 18px;
+    box-shadow: 0 0 2px #000;
+    border-radius: 5px;
+}
+
+.sing_in { padding: 0; }
