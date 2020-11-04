@@ -3,76 +3,47 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row welcome">
-          <div class="col-lg-3 col-6">
+          <?php
+           if(isset($data))
+                  {
+                     foreach ($data as $row)
+                     {
+                       ?>
+          <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>
-              <?php
-                   foreach ($data1 as $row1)
-                     {
-                       echo $row1['cout'];
-                     }
-                  ?>
-                  </h3>
-                <p>Categories</p>
+                <p>Name : <?= $row['name'];?></p>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url();?>admin/category" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
+        </div>
+          <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-info">
               <div class="inner">
-                <h3>
-                <?php
-                   foreach ($data as $row)
-                     {
-                       echo $row['cout'];
-                     }
-                  ?>
-                </h3>
-
-                <p>Users</p>
+                <p>Organization : <?= $row['organisation'];?></p>
               </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="<?= base_url();?>admin/home" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>
-                <?php
-                   foreach ($data2 as $row2)
-                     {
-                       echo $row2['cout'];
-                     }
-                  ?>
-                </h3>
-                <p>Articles</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="<?= base_url();?>admin/articles" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
         <!-- /.row -->
-        
+        <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <p>Designation : <?= $row['designation'];?></p>
+              </div>
+          </div>
+        </div>
 
-            
+          <div class="col-lg-6 col-6">
+            <!-- small box -->
+            <img src="<?= base_url("public/dist/img/prod-1.jpg"); ?>">
+          </div>        
 
+          <?php
+          }
+          }  
+?>
             
           </section>
           <!-- /.Left col -->

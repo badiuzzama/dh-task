@@ -1,6 +1,3 @@
-# Simple Codeigniter REST API
-Simple source code for learning basic backend developer using REST API (login, CRUD).
-
 # Test the API
 You can test the API by including header `Content-Type`,`Client-Service` & `Auth-Key` with value `application/json`,`frontend-client` & `simplerestapi` in every request
 

@@ -10,7 +10,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header" style="margin-top: 5%;">
-                <h3 class="card-title"><a href="<?= base_url('admin/child')?>"><i class="fa fa-arrow-left"></i></a> Add Child</h3>
+                <h3 class="card-title"><a href="<?= base_url('admin/child')?>"><i class="fa fa-arrow-left"></i></a>   Add Child</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -20,7 +20,7 @@
                     <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Name" required>
                   </div>
                   <div class="form-group">
-                    <select class="custom-select" name="category_id" required>
+                    <select class="custom-select" name="sex" required>
                           <option value="">Sex</option>
                           <option>Male</option>
                           <option>Female</option>
@@ -47,13 +47,13 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <select name="district" id="district" class="custom-select">
+                    <select name="district_id" id="district" class="custom-select">
                       <option value="">Select District</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Take a Photo</label>
-                    <input type="file" accept=".pdf" name="files">
+                    <input type="file" accept=".jpg,.png,.jpeg" name="files">
                   </div>
                 <!-- /.card-body -->
 

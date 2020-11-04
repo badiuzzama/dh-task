@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2020 at 05:27 PM
+-- Generation Time: Nov 04, 2020 at 05:10 PM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -47,7 +47,8 @@ CREATE TABLE `child` (
 
 INSERT INTO `child` (`id`, `district_id`, `name`, `sex`, `dob`, `father_name`, `mother_name`, `photo`, `created_at`, `updated_at`) VALUES
 (1, 2, 'kha', 'Male', '2020-11-02', 'zik', 'no', 'yes.jpg', '2020-11-02 21:58:20', '2020-11-02 21:58:20'),
-(2, 2, 'ramai', 'Female', '1999-10-14', 'harami', 'sarami', 'abc.jpg', '2020-11-02 21:58:20', '2020-11-02 23:28:29');
+(2, 2, 'ramai', 'Female', '1999-10-14', 'filmi', 'sarami', 'abc.jpg', '2020-11-02 21:58:20', '2020-11-02 23:28:29'),
+(3, 4, 'mohd khan', 'Male', '2020-11-04', 'ggg', 'hgyg', '', '2020-11-04 13:07:26', '2020-11-04 13:07:26');
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,8 @@ INSERT INTO `districts` (`id`, `state_id`, `district`, `created_at`, `updated_at
 (2, 3, 'Gautam Budh Nagar', '2020-11-02 18:58:45', '2020-11-02 18:58:45'),
 (3, 3, 'Kanpur', '2020-11-02 18:58:55', '2020-11-02 18:58:55'),
 (4, 5, 'Dehradoon', '2020-11-02 18:59:09', '2020-11-02 18:59:09'),
-(5, 5, 'Nainital', '2020-11-02 18:59:21', '2020-11-02 18:59:21');
+(5, 5, 'Nainital', '2020-11-02 18:59:21', '2020-11-02 18:59:21'),
+(6, 8, 'Patnaa', '2020-11-04 20:05:21', '2020-11-04 20:05:21');
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,11 @@ CREATE TABLE `states` (
 
 INSERT INTO `states` (`id`, `state`, `created_at`, `updated_at`) VALUES
 (3, 'Uttar Pradesh', '2020-11-02 18:01:29', '2020-11-02 18:01:29'),
-(5, 'Uttrakhand', '2020-11-02 18:14:08', '2020-11-02 18:14:08');
+(5, 'Uttrakhand', '2020-11-02 18:14:08', '2020-11-02 18:14:08'),
+(6, 'Rajasthan', '2020-11-04 18:40:27', '2020-11-04 18:40:27'),
+(7, 'Punjab', '2020-11-04 18:41:09', '2020-11-04 18:41:09'),
+(8, 'Bihar', '2020-11-04 18:43:17', '2020-11-04 18:43:17'),
+(9, 'Karnataka', '2020-11-04 18:44:24', '2020-11-04 18:44:24');
 
 -- --------------------------------------------------------
 
@@ -105,7 +111,10 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `passcode` varchar(150) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `organisation` varchar(100) NOT NULL,
+  `designation` varchar(50) NOT NULL,
   `last_login` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -115,8 +124,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `name`, `last_login`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$1$Dtqyvz7/$wZSaZbfHgn0UbLlVi1HHp0', 'Admin', '2020-11-02 14:08:50', '2020-11-02 10:35:16', '2020-11-02 10:35:16');
+INSERT INTO `users` (`id`, `username`, `password`, `passcode`, `name`, `organisation`, `designation`, `last_login`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '$1$Dtqyvz7/$wZSaZbfHgn0UbLlVi1HHp0', '81dc9bdb52d04dc20036dbd8313ed055', 'Ramesh Kumar', 'Bal Vikas', 'Cluster Cordinator', '2020-11-02 14:08:50', '2020-11-02 10:35:16', '2020-11-02 10:35:16');
 
 -- --------------------------------------------------------
 
@@ -184,17 +193,17 @@ ALTER TABLE `users_authentication`
 -- AUTO_INCREMENT for table `child`
 --
 ALTER TABLE `child`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `districts`
 --
 ALTER TABLE `districts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `states`
 --
 ALTER TABLE `states`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --

@@ -43,7 +43,7 @@
                   <td><?= $row['mother_name']; ?></td>
                   <td><?= $row['state']; ?></td>
                   <td><?= $row['district']; ?></td>
-                  <td><a href="view-child/<?= $row['id'];?>" class="btn btn-primary">view</a></td>
+                  <td><a href="view_child/<?= $row['id'];?>" class="btn btn-primary">view</a></td>
                 </tr>
                 <?php
                      }
